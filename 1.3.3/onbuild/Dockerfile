@@ -2,6 +2,7 @@ FROM            nginx:mainline-alpine
 
 ENV             VERSION=1.3.3
 
+COPY            staticfiles.conf /etc/nginx/conf.d/
 ONBUILD COPY    source/ /tmp/slate/source/
 ONBUILD RUN     mkdir -p /opt/src/ && cd /opt/src && \
                 apk --no-cache add --virtual .build-deps \

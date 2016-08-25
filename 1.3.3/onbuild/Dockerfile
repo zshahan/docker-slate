@@ -22,7 +22,7 @@ ONBUILD RUN     mkdir -p /opt/src/ && cd /opt/src && \
                 curl -L https://github.com/lord/slate/archive/v$VERSION.tar.gz | tar -xz && \
                 cd slate-$VERSION && \
                 mkdir -p /tmp/slate/source/ && \
-                cp -R /tmp/slate/source/ source/ && \
+                cp -R /tmp/slate/source/* source/ && \
                 export BUNDLE_SILENCE_ROOT_WARNING=1 && \
                 bundle config build.nokogiri --use-system-libraries && \
                 bundle install && \

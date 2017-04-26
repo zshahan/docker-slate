@@ -1,6 +1,6 @@
 FROM            nginx:mainline-alpine
 
-ENV             VERSION=1.3.3
+ENV             VERSION=1.5
 
 COPY            staticfiles.conf /etc/nginx/conf.d/
 RUN             rm -rf /usr/share/nginx/html/*

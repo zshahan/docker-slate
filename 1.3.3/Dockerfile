@@ -1,6 +1,6 @@
 FROM            ruby:2.3-alpine
 
-ENV             VERSION=1.3.3
+ENV             VERSION=1.5
 
 WORKDIR         /usr/src/app
 RUN             apk --no-cache add --virtual .build-deps \
